@@ -1,0 +1,28 @@
+{
+    "name": "a.svetlichniy/karma8",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Karma8\\": "src/"
+        },
+        "files": [
+            "src/Core/Env.php",
+            "src/Core/Settings.php",
+            "src/Database/Database.php",
+            "src/Database/Queue.php",
+            "src/Database/User.php",
+            "src/Email/EmailProvider.php",
+            "src/Jobs/CheckEmail.php",
+            "src/Jobs/EmailNotification.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "a.svetlichniy",
+            "email": "aasvetlichniy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    }
+}

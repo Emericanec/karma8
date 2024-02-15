@@ -1,0 +1,28 @@
+#!/usr/bin/php
+<?php
+$command = $argv[1] ?? '';
+
+switch ($command) {
+  case 'initdb':
+    require_once __DIR__ . '/commands/InitialDatabase.php';
+    break;
+  case 'check_email_enqueue':
+    require_once __DIR__ . '/commands/CheckEmailEnqueue.php';
+    break;
+  case 'email_notification_enqueue':
+    $argv[1] = isset($argv[2]) ? (int)$argv[2] : 1;
+    require_once __DIR__ . '/commands/EmailNotificationEnqueue.php';
+    break;
+  case 'check_email_worker':
+    $argv[1] = isset($argv[2]) ? (int)$argv[2] : 1;
+    require_once __DIR__ . '/commands/CheckEmailWorker.php';
+    break;
+  case 'email_notification_worker':
+    $argv[1] = isset($argv[2]) ? (int)$argv[2] : 1;
+    $argv[2] = isset($argv[3]) ? (int)$argv[3] : 1;
+    require_once __DIR__ . '/commands/EmailNotificationWorker.php';
+    break;
+  default:
+    echo "Unknown command {$command}" . PHP_EOL;
+    break;
+}
