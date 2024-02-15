@@ -8,6 +8,7 @@
         "files": [
             "src/Core/Env.php",
             "src/Core/Settings.php",
+            "src/Core/Worker.php",
             "src/Database/Database.php",
             "src/Database/Queue.php",
             "src/Database/User.php",
