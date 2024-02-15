@@ -10,6 +10,6 @@ $days            = isset($argv[2]) ? (int)$argv[2] : 1;
 
 runWorker(
   "email_notification_{$days}_worker",
-  $maxWorkersCount,
-  fn() => sendEmailNotification($days)
+  fn() => sendEmailNotification($days),
+  $maxWorkersCount
 );

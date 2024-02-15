@@ -2,7 +2,7 @@
 
 namespace Karma8\Core;
 
-function runWorker(string $lockKey, int $maxWorkersCount, callable $function): void {
+function runWorker(string $lockKey, callable $function, int $maxWorkersCount = 1): void {
   $locked = false;
   for ($currentWorkerNum = 1; $currentWorkerNum <= $maxWorkersCount; $currentWorkerNum++) {
     $lockFile = sys_get_temp_dir() . "{$lockKey}_{$currentWorkerNum}.lock";

@@ -9,6 +9,6 @@ $maxWorkersCount = isset($argv[1]) ? (int)$argv[1] : 1;
 
 runWorker(
   'check_email_worker',
-  $maxWorkersCount,
-  fn() => checkUsersEmail()
+  fn() => checkUsersEmail(),
+  $maxWorkersCount
 );
