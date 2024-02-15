@@ -1,6 +1,7 @@
 # Karma8 test task
 ## Шаги по установке:
 
+- Делаем `composer install`
 - Копируем .env:
 
     `cp .env.example .env`
