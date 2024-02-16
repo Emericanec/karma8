@@ -3,6 +3,6 @@
 0 0 * * * php /path/to/karma8 email_notification_enqueue 1 # enqueue email notification before 1 days
 0 0 * * * php /path/to/karma8 email_notification_enqueue 3 # enqueue email notification before 3 days
 
-* * * * * php /path/to/karma8 check_email_worker # check emails worker
+* * * * * php /path/to/karma8 check_email_worker 8 # check emails with 8 workers
 * * * * * php /path/to/karma8 email_notification_worker 8 1 # email notification before 1 days with 8 workers
 * * * * * php /path/to/karma8 email_notification_worker 8 3 # email notification before 3* days with 8 workers

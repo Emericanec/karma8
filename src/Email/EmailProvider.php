@@ -17,15 +17,13 @@ function check_email(string $email): int {
     return 0;
   }
 
-  //sleep(mt_rand(1, 60));
   sleep(mt_rand(1, 2));
 
   return mt_rand(0, 1);
 }
 
 function send_email(string $from, string $to, string $text): bool {
-  //sleep(mt_rand(1, 10));
-  sleep(mt_rand(1, 2));
+  sleep(mt_rand(1, 10));
 
   return mt_rand(0, 100) > 5; // even if email is valid can return false (example: no free space on email account)
 }
